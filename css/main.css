@@ -1,0 +1,158 @@
+/* Custom font */
+@font-face {
+    src: url(/fonts/font.ttf);
+    font-family: CherryBomb;
+}
+
+body {
+    background-color: rgb(243, 232, 183);
+    font-family: CherryBomb, monospace, sans-serif;
+    font-size: large;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+    padding: 16px;
+} 
+
+
+.product-section {
+    justify-content: center;
+}
+
+.product-box {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    margin: 4px;
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0px 1px 5px rgba(20, 13, 8, 0.2);
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.product-box__price {
+    color: #333333;
+}
+
+.product-box__title {
+    color: black;
+}
+
+.product-box__btn {
+    padding: 8px 12px;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 8px;    
+    background-color: rgb(219, 237, 246);
+    color: black;
+    cursor: pointer;
+}
+
+.product-box__btn .fa-cart-shopping {
+    margin: 0;
+}
+
+.img-container {
+    height: 55%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-responsive {
+    width: 85%;
+    height: 85%;
+    overflow:hidden;
+    display: flex;
+    border-radius: 8px;
+} 
+
+.product-box:hover {
+    transform: scale(1.05);
+}
+
+.product-btn, button:hover {
+    background-color: rgb(199, 228, 242);
+}
+
+.product-box__btn:active {
+    transform: scale(0.95);
+}
+
+.grid-12-column {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+
+/*
+    Mobilstørrelser (<768px): xs
+*/
+
+.xs-12{
+    grid-column: auto / span 12;
+}
+
+.xs-8{
+    grid-column: auto / span 8;
+}
+
+.xs-6{
+    grid-column: auto /span 6;
+}
+
+.xs-4{
+    grid-column: auto / span 4;
+}
+
+/*
+    Tablestørrelser (768px+): sm
+*/
+@media (width>=768px){
+    .sm-12{
+        grid-column: auto / span 12;
+    }
+
+    .sm-8{
+        grid-column: auto / span 8;
+    }
+
+    .sm-6{
+        grid-column: auto / span 6;
+    }
+
+    .sm-4{
+        grid-column: auto / span 4;
+    }
+
+    .sm-3{
+        grid-column: auto / span 3;
+    }
+}
+
+/*
+    Laptop (992px+): md
+*/
+@media (width>992px){
+    .md-4{
+        grid-column: auto / span 4;
+    }
+}
+
+/*
+    Større laptop (1200px+): lg
+*/
+@media (width>1200px){
+    .lg-3{
+        grid-column: auto / span 3;
+    }
+}
